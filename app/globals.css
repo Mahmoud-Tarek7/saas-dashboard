@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0B1B2B;
+  color: #F3EFE3;
+  background-image: radial-gradient(circle at 1px 1px, rgba(212,175,55,0.06) 1px, transparent 0);
+  background-size: 22px 22px;
+}
+
+::selection {
+  background-color: #D4AF37;
+  color: #0B1B2B;
+}
+
+:focus-visible {
+  outline: 2px solid #D4AF37;
+  outline-offset: 2px;
+}
+
+/* توهج نيون */
+.glow-gold {
+  box-shadow: 0 0 1px rgba(212, 175, 55, 0.5), 0 0 24px rgba(212, 175, 55, 0.25);
+}
+.glow-emerald {
+  box-shadow: 0 0 1px rgba(47, 158, 110, 0.5), 0 0 24px rgba(47, 158, 110, 0.25);
+}
+.glow-rust {
+  box-shadow: 0 0 1px rgba(201, 123, 74, 0.5), 0 0 24px rgba(201, 123, 74, 0.25);
+}
+.glow-text-gold {
+  text-shadow: 0 0 18px rgba(212, 175, 55, 0.45);
+}
+.glow-border-gold {
+  box-shadow: inset 0 0 0 1px rgba(212, 175, 55, 0.35), 0 0 22px rgba(212, 175, 55, 0.12);
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+.pulse-dot {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* شريط تمرير أنيق */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #264D6B;
+  border-radius: 8px;
+}
